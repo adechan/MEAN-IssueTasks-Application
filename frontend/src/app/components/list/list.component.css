@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+#title { 
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#body {
+    margin-top: 100px;
+}
+
+#create-task { 
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+table {
+    margin-left: 20px;
+}
+
+th, td {
+    width: 100px;
+    align-items: center;
+}

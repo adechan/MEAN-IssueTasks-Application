@@ -1,1 +1,28 @@
-<p>edit works!</p>
+<div id="title">MEAN Stack Issue Tasks Application</div>
+
+<div id="body">
+    <p>Edit Issue</p>
+
+    <form [formGroup]="updateForm" class="edit-form">
+        <input type="text" formControlName="title" placeholder="Issue Title">
+        <input type="text" formControlName="responsible" placeholder="Issue Responsible">
+        <input type="text" formControlName="description" placeholder="Issue Description">
+
+        <select formControlName="severity" placeholder="Severity" #severity>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <select formControlName="status" placeholder="status" #status>
+            <option value="Open">Open</option>
+            <option value="In progress">In progress</option>
+            <option value="Done">Done</option>
+        </select>
+
+        <button routerLink="/list">Back</button>
+        <button type="submit" (click)="updateIssue()">Save</button>
+
+    </form>
+
+</div>

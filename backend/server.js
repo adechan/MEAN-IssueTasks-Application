@@ -72,12 +72,18 @@ router.route('/issues/update/:id').post((req, res) => {
     });
 });
 
-router.route('/issues/delete/:id').get((req, res) => {
+router.route('/issues/delete/:id').delete((req, res) => {
+    console.log(req.params.id);
     Issue.findByIdAndRemove({_id: req.params.id}, (err, issue) => {
         if (err)
-            res.json(err);
+        {
+            res.json("You can't remove this");
+            console.log(err);
+        }
         else
+        {
             res.json('Remove successfully');
+        }
     })
 })
 
