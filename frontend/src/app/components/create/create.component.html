@@ -1,22 +1,25 @@
-<div id="title">MEAN Stack Issue Tasks Application</div>
-
 <div id="body">
-    <p>Create a new task</p>
+    <div id="title">Issue Tasks</div>
+    <div id="sub-body">
+        <p id="task-title">New task</p>
 
-    <form [formGroup]="createForm" class="create-form">
-        <input type="text" formControlName="title" placeholder="Issue Title">
-        <input type="text" formControlName="responsible" placeholder="Issue Responsible">
-        <input type="text" formControlName="description" placeholder="Issue Description">
+        <form [formGroup]="createForm" class="create-form">
+            <input type="text" formControlName="title" placeholder="Issue Title">
+            <input type="text" formControlName="responsible" placeholder="Issue Responsible">
+            <input type="text" formControlName="description" placeholder="Issue Description">
 
-        <select formControlName="severity" placeholder="Severity" #severity>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-        </select>
+            <select formControlName="severity" placeholder="Severity" #severity>
+                <option value="" selected disabled hidden>Severity</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
 
-        <button routerLink="/list">Back</button>
-        <button type="submit" (click)="addIssue()">Save</button>
-
-    </form>
-
+            <div id="buttons">
+                <button id="back" routerLink="/list">Back</button>
+                <button id="save" type="submit" (click)="addIssue()">Save</button>
+            </div>
+            
+        </form>
+    </div>
 </div>

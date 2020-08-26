@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+#title { 
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#body {
+    height: 100vh;
+    width: 50vw;
+
+    background: #f8f7f7;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#task-title {
+    text-align: center;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+input { 
+    width: 50%;
+    height: 25px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #d3d1d1;
+}
+
+select { 
+    width: 51%;
+    height: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #d3d1d1;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row; 
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+#back, #save { 
+    width: 15%;
+    height: 25px;
+    color: white;
+   
+    cursor: pointer;
+
+}
+
+#back { 
+    background-color: #6881b3; 
+    border: 1px solid #6881b3;
+}
+
+#save { 
+    background-color: rgb(245, 89, 89); 
+    border: 1px solid rgb(245, 89, 89);
+}

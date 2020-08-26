@@ -1,29 +1,32 @@
-<div id="title">MEAN Stack Issue Tasks Application</div>
 
 <div id="body">
-    <button id="create-task" routerLink="/create">Create new task</button>
-    <table>
-        <tr>
-            <th class="title">Title</th>
-            <th class="responsible">Responsible</th>
-            <th class="severity">Severity</th>
-            <th class="status">Status</th>
-            <th class="actions">Actions</th>
-        </tr>
+    <div id="title">Issue Tasks</div>
 
-        <tr *ngFor="let issue of issues">
-            <td class="title-value">{{issue.title}}</td>
-            <td class="responsible-value">{{issue.responsible}}</td>
-            <td class="severity-value">{{issue.severity}}</td>
-            <td class="status">{{issue.status}}</td>
-
-            <td class="buttons">
-                <button id="edit" (click)="editIssue(issue._id)">Edit</button>
-                <button id="delete" (click)="deleteIssue(issue._id)">Delete</button>
-            </td>
-
-        </tr>
-
-    </table>
+    <div id="sub-body">
+        <button id="create-task" routerLink="/create">Create a new task</button>
+        <table>
+            <tr>
+                <th class="title">Title</th>
+                <th class="responsible">Responsible</th>
+                <th class="severity">Severity</th>
+                <th class="status">Status</th>
+                <th class="actions">Actions</th>
+            </tr>
+    
+            <tr *ngFor="let issue of issues">
+                <td class="title-value">{{issue.title}}</td>
+                <td class="responsible-value">{{issue.responsible}}</td>
+                <td class="severity-value">{{issue.severity}}</td>
+                <td class="status">{{issue.status}}</td>
+    
+                <td class="buttons">
+                    <button id="edit" (click)="editIssue(issue._id)">Edit</button>
+                    <button id="delete" (click)="deleteIssue(issue._id)">Delete</button>
+                </td>
+    
+            </tr>
+    
+        </table>
+    </div>
 
 </div>
